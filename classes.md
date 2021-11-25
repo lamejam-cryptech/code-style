@@ -219,3 +219,20 @@ class Matrix {
     }
 }
 ```
+
+Notice, though, that `getElement()` and `setElement()` _are_ both instance
+methods.
+Both methods are inextricably tied to the current state of an instance.
+
+
+## Conclusion
+In summary, classes should never have fields that store references.
+Anything stored in a class field should be explicitly and uniquely owned
+by the class.
+Any other data should be passed explicitly as parameters of any class
+functions and methods.
+
+Similarly, functions should only be instance methods when they are explicitly
+tied to the data of a particular instance.
+Any other functions should be actual functions.
+
